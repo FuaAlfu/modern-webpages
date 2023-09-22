@@ -1,0 +1,96 @@
+/* Reset some default styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #581e1e;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    width: 115px;
+    height: 15px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 25px;
+    transition: 3ms ease-in;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background: #4E9CAF;
+}
+
+main {
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: rgba(226, 218, 218, 0.9);
+    animation: moveTitle 4s ease-in-out;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+#cta-button {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#cta-button:hover {
+    background-color: #444;
+}
+
+@keyframes moveTitle {
+    0%,
+    100% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+}

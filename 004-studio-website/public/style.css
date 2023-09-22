@@ -53,8 +53,8 @@ main {
     align-items: center;
     justify-content: center;
     height: 4rem;
-    background: #333;
-    color: #fff;
+    background: var(--black);
+    color: var(--white);
 }
 
 .page-footer p {
