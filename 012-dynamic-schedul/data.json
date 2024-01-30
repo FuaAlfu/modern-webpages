@@ -1,0 +1,8 @@
+{
+    "info": [
+        { "name": "John Doe", "age": 30, "phone": "123-456-7890" },
+        { "name": "Jane Doe", "age": 25, "phone": "987-654-3210" },
+        { "name": "Alice Smith", "age": 28, "phone": "555-123-4567" },
+        { "name": "Bob Johnson", "age": 35, "phone": "444-987-6543" }
+    ]
+}
