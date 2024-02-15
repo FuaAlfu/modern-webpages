@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.animated-border {
+    width: 200px;
+    height: 100px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    position: relative;
+    animation: animateBorder 2s linear infinite;
+}
+
+@keyframes animateBorder {
+    0%,
+    100% {
+        border-color: #3498db;
+    }
+    25% {
+        border-color: #e74c3c;
+    }
+    50% {
+        border-color: #2ecc71;
+    }
+    75% {
+        border-color: #f39c12;
+    }
+}
