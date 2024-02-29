@@ -1,0 +1,21 @@
+{
+    "games": [{
+            "title": "Game 1",
+            "description": "Exciting Adventure",
+            "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "image": "game1.jpg"
+        },
+        {
+            "title": "Game 2",
+            "description": "Epic Quest",
+            "details": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+            "image": "game2.jpg"
+        },
+        {
+            "title": "Game 3",
+            "description": "Space Exploration",
+            "details": "Sed elementum odio in augue hendrerit, vel luctus felis commodo.",
+            "image": "game3.jpg"
+        }
+    ]
+}
