@@ -1,0 +1,36 @@
+*{
+  box-sizing:border-box;
+  border: 2px red solid;
+}
+
+body{
+font-style: sans-serif;
+background: #ddd;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.container p{
+  font-size: 1rem;
+  color: blue;
+}
