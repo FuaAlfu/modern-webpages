@@ -1,0 +1,46 @@
+:root {
+    --light-background-clr: #fff;
+    --dark-background-clr: #333;
+    --light-text-clr: #fff;
+    --dark-text-clr: #333;
+    --light-button-background-color: #eee;
+    --light-button-text-color: #333;
+    --button-hover-background-color: #ccc;
+}
+
+*{
+box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-background-clr);
+    color: var(--dark-text-clr);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--light-button-background-color);
+    color: var(--light-button-text-color);
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#theme-toggle:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+.log{
+    text-align: center;
+}
+
+.dark-theme {
+    background: var(--dark-background-clr);
+    color: var(--light-text-clr);
+}
