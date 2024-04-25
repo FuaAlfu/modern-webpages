@@ -1,0 +1,95 @@
+*{
+box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+body, header, aside, section, footer {
+    padding: 20px;
+    margin: 10px;
+    border: 4px dotted #ddd;
+    border-radius: 5px;
+}
+
+header h1 {
+    color: blue; /* Initial color */
+    transition: color 1s; 
+}
+
+p{
+color: #fff;
+font-size: 2rem;
+}
+
+a{
+text-decoration: none;
+color: #fff;
+border-right: 1px solid #000;
+}
+
+footer {
+    flex-shrink: 0; 
+    width: 100%; 
+    text-align: center; 
+    padding: 20px 0; 
+}
+
+section .slide {
+    animation: slideIn 1s forwards;
+}
+
+.main-content {
+    flex: 1 0 auto;
+}
+
+.links{
+display: block;
+}
+
+.date,.currentYear{color: #fff;}
+
+a:hover{
+color: red;
+text-decoration: underline;
+}
+
+/* Animation for paragraph */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 992px) { /* Desktops */
+    aside { width: 20%; float: left; }
+    section { width: 75%; float: right; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { /* Tablets */
+    aside, section {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (max-width: 767px) { /* Mobile Phones */
+    aside, section {
+        width: 100%;
+        float: none;
+    }
+}
