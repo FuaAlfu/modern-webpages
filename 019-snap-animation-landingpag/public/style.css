@@ -1,5 +1,5 @@
-*{
-box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
 html, body {
@@ -15,66 +15,104 @@ body {
     color: #fff;
     font-family: Arial, sans-serif;
 }
-body, header, aside, section, footer {
+
+header, aside, section, footer {
     padding: 20px;
     margin: 10px;
-    border: 4px dotted #ddd;
+    border: 5px dotted #ddd;
     border-radius: 5px;
 }
 
 header h1 {
     color: blue; /* Initial color */
-    transition: color 1s; 
+    transition: color 1s;
+    text-align: center;
 }
 
-p{
-color: #fff;
-font-size: 2rem;
+p {
+    color: #fff;
+    font-size: 2rem;
 }
 
-a{
-text-decoration: none;
-color: #fff;
-border-right: 1px solid #000;
+a {
+    text-decoration: none;
+    color: #fff;
+    padding-right: 8px; /* Right padding to separate text from border */
+    border-right: 1px solid #fff; /* White border for links */
+}
+
+/* Last anchor in the links div should not have a right border */
+.links a:last-child {
+    border-right: none;
 }
 
 footer {
-    flex-shrink: 0; 
-    width: 100%; 
-    text-align: center; 
-    padding: 20px 0; 
+    flex-shrink: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
 }
 
-section .slide {
-    animation: slideIn 1s forwards;
+i.fas {
+    font-size: 2rem;  /* Set icon size */
+    color: #fff;      /* Set icon color to white */
+    margin-right: 10px; /* Add spacing between icon and text */
 }
+
+/* Specific icon styling if needed */
+i.fa-gamepad, i.fa-chess-knight, i.fa-puzzle-piece {
+    padding: 5px; /* Adds padding around the icon */
+    border-radius: 50%; /* Makes background circular */
+    background-color: #444; /* Darker background for visibility */
+}
+
 
 .main-content {
     flex: 1 0 auto;
 }
 
-.links{
-display: block;
+.links {
+    display: block;
 }
 
-.date,.currentYear{color: #fff;}
-
-a:hover{
-color: red;
-text-decoration: underline;
+.date, .currentYear {
+    color: #fff;
 }
 
-/* Animation for paragraph */
-@keyframes slideIn {
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Animations for paragraphs on scroll */
+section .slide-left, section .slide-right {
+    opacity: 0; /* Start elements as invisible */
+}
+
+/* Specific animations for sliding directions */
+@keyframes slideInRight {
     from {
-        transform: translateX(-100%);
+        transform: translateX(100%);
+        opacity: 0;
     }
     to {
         transform: translateX(0);
+        opacity: 1;
     }
 }
 
-/* Media Queries for Responsiveness */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive design adjustments */
 @media (min-width: 992px) { /* Desktops */
     aside { width: 20%; float: left; }
     section { width: 75%; float: right; }
