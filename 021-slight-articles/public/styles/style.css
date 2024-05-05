@@ -1,0 +1,44 @@
+:root {
+    --background-color: purple;
+    --text-color: white;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+header{
+text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    overflow: auto;
+    scroll-snap-type: y proximity;
+}
+
+.article {
+    scroll-snap-align: start;
+    border: 1px solid white;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency to see purple */
+}
+
+.article img {
+    width: 400px;
+    height: 300px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--background-color);
+}
