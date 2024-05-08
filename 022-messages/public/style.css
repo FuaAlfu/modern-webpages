@@ -1,0 +1,43 @@
+:root {
+    --background-color: orange;
+    --text-color: black;
+    --border-radius: 10px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+main {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.message-container, .detail-container {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #fff;
+    border-radius: var(--border-radius);
+}

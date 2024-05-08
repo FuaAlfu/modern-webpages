@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures that parts of the spans sliding in/out are hidden */
+}
+
+.text {
+    display: inline-block;
+    margin: 0 2px;
+    transition: transform 0.5s ease; /* Smooth transition for transform property */
+    position: relative; /* Required for the animation positioning */
+}
+
+a:hover .text {
+    animation: slideIn 0.5s forwards; /* Applies the slide animation */
+}
+
+/* Keyframes for the slide animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+a:hover .text:nth-child(odd) {
+    animation: slideOut 0.5s forwards; /* Different animation for odd children */
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
